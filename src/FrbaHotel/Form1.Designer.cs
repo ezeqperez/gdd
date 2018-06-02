@@ -1,6 +1,6 @@
 ﻿namespace FrbaHotel
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -28,78 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userLabel = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.userTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.confirm = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // userLabel
-            // 
-            this.userLabel.AutoSize = true;
-            this.userLabel.Location = new System.Drawing.Point(36, 62);
-            this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(86, 25);
-            this.userLabel.TabIndex = 0;
-            this.userLabel.Text = "Usuario";
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(36, 126);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(123, 25);
-            this.passwordLabel.TabIndex = 1;
-            this.passwordLabel.Text = "Contraseña";
-            // 
-            // textBox1
-            // 
-            this.userTextBox.Location = new System.Drawing.Point(184, 62);
-            this.userTextBox.Name = "textBox1";
-            this.userTextBox.Size = new System.Drawing.Size(250, 31);
-            this.userTextBox.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.passwordTextBox.Location = new System.Drawing.Point(184, 123);
-            this.passwordTextBox.Name = "textBox2";
-            this.passwordTextBox.Size = new System.Drawing.Size(250, 31);
-            this.passwordTextBox.TabIndex = 3;
             // 
             // button1
             // 
-            this.confirm.Location = new System.Drawing.Point(184, 194);
-            this.confirm.Name = "button1";
-            this.confirm.Size = new System.Drawing.Size(131, 41);
-            this.confirm.TabIndex = 4;
-            this.confirm.Text = "Ingresar";
-            this.confirm.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(631, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(54, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // button2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(261, 224);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(223, 78);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Reservar Ya!";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            this.fileSystemWatcher1.Changed += new System.IO.FileSystemEventHandler(this.fileSystemWatcher1_Changed);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::FrbaHotel.Properties.Resources.turbostar_logo;
+            this.pictureBox2.Location = new System.Drawing.Point(261, 87);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(223, 120);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::FrbaHotel.Properties.Resources.hotel_main;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(761, 400);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(691, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(58, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Exit";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Main
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 303);
-            this.Controls.Add(this.confirm);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.userTextBox);
-            this.Controls.Add(this.passwordLabel);
-            this.Controls.Add(this.userLabel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(761, 400);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
+            this.Name = "Main";
+            this.Text = "TurboStar Hotels & Resorts";
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label userLabel;
-        private System.Windows.Forms.Label passwordLabel;
-        private System.Windows.Forms.TextBox userTextBox;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.Button confirm;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Button button3;
     }
 }
-
